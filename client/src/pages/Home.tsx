@@ -43,15 +43,19 @@ export default function Home() {
   }, []);
   
   return (
-    <div className="font-sans text-dark overflow-x-hidden paper-texture">
+    <div className="font-sans overflow-x-hidden paper-texture neural-bg min-h-screen">
+      <div className="fixed bottom-6 right-6 z-50">
+        <Chatbot />
+      </div>
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Certificates />
-      <Chatbot />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Certificates />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

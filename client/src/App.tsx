@@ -4,6 +4,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import { Cursor } from "@/components/Cursor";
 import { useEffect } from "react";
+import { ThemeProvider } from "@/lib/theme";
 
 function Router() {
   return (
@@ -31,11 +32,11 @@ function App() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Cursor />
       <Router />
       <Toaster />
-    </>
+    </ThemeProvider>
   );
 }
 
