@@ -79,10 +79,41 @@ export default {
             height: "0",
           },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "data-flow": {
+          "0%": { 
+            backgroundPosition: "0% 0%",
+            opacity: "0.5"
+          },
+          "50%": { opacity: "1" },
+          "100%": { 
+            backgroundPosition: "100% 100%",
+            opacity: "0.5"
+          },
+        },
+        "grid-flow": {
+          "0%": { transform: "translateY(0) translateX(0)" },
+          "25%": { transform: "translateY(5px) translateX(-5px)" },
+          "50%": { transform: "translateY(0) translateX(0)" },
+          "75%": { transform: "translateY(-5px) translateX(5px)" },
+          "100%": { transform: "translateY(0) translateX(0)" },
+        },
+        "matrix-scan": {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "spin-slow": "spin-slow 12s linear infinite",
+        "spin-slower": "spin-slow 18s linear infinite reverse",
+        "data-flow": "data-flow 10s ease infinite alternate",
+        "grid-flow": "grid-flow 10s ease-in-out infinite",
+        "matrix-scan": "matrix-scan 20s linear infinite",
       },
     },
   },
